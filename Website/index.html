@@ -1,0 +1,122 @@
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="main.css" />
+		<title> Dog </title>
+
+		<script>
+			function banner(){
+				var text = confirm("Did You Really Want To Click on My Banner");
+				return text;
+
+			}
+
+			function answer(){
+				var radio = document.getElementsByName("trivia");
+				var selection = false;
+				var message = "";
+				for( var i = 0; i < radio.length; i++) {
+					if(radio[i].value == "yes" && radio[i].checked == true) {
+						selection = true;		
+					} //end if statement
+				} //end for loop
+
+				if(selection == true) {
+					message = message + "<b><p style='color:lime'>Good Job!</p></b>";
+				} else {
+					message = message + "<b><p style='color:#e60000'>Wrong answer try again.</p></b>";
+				}
+					document.getElementById("response").innerHTML = message;
+			
+			} //end function answer
+
+
+		</script>
+
+
+		
+	</head>
+	<body id="background">
+
+		<a  onclick="return banner()" href="https://simplystem.com">	
+			
+			<header id="banner">This is <span class="wrap-text">for sure</span> my header!</header>		
+
+		</a>	
+
+
+		<nav>
+			<ul id="navmenu">
+				<li class="navitem"> <a href="index.html">Home</a> </li>
+				<li class="navitem"> <a href="games.html">Games</a> </li>
+				<li class="navitem"> <a href="videos.html">Videos</a> </li>
+			</ul>
+		</nav>
+
+		<div class="rightside">  
+			<center>
+				<video width="400" height="220" controls>
+					<source src="http://www.w3schools.com/HTML/mov_bbb.mp4" type="video/mp4">
+					<source src="http://www.w3schools.com/HTML/mov_bbb.ogg" type="video/ogg">
+					Your browser does not support HTML5 video.
+				</video>
+
+				<img width="50%" src="https://thumbs.dreamstime.com/z/pug-dog-walking-autumn-park-happy-puppy-sitting-grass-showing-tongue-resting-outdoors-130807616.jpg" />
+				
+				<img width="30%" src="https://thumbs.dreamstime.com/z/pug-dog-sits-window-sill-raises-its-paw-as-its-master-asks-training-dog-s-skills-pug-dog-raises-its-paw-as-its-master-112693879.jpg" /> 
+
+				<audio width="400" height="220" controls>
+					<source src="http://www.w3schools.com/tags/horse.mp3" type="audio/mpeg">
+					Your browser does not support HTML 5 audio.
+				</audio>
+			</center>	
+
+
+		</div> <!-- closing rightside div tag -->	
+
+		<div class="leftside">
+
+			<h1>Dog Training</h1>
+			<p> I have a <span style="color:pink">dog</span> , her name is <i>Bobby</i>. She is very good and like to play. She is very <strong>cute</strong> especially being a <u>pug</u>. I love her very much.
+			</p>
+		
+
+			<div class="wrap-list">
+
+				<ol>
+					<li class="listitem">Dogs are playful</li>
+					<li class="listitem">Dogs are cute</li>
+					<li class="listitem">Dogs are best friends</li>
+				</ol>
+			</div>
+
+			<div class="wrap-trivia">
+				<h2>Animal Trivia Question</h2>
+				<p class="paragraph"> <span style="color:#00cc00">What's the fastest animal in the world?</span> </p>
+				<form>
+						<div id="response"> </div>
+						<input type="radio" name="trivia" value="no"> Cheetah <br/>
+						<input type="radio" name="trivia" value="no"> Antelope <br/>
+						<input type="radio" name="trivia" value="yes"> Peregrine Falcon <br/>
+						<input type="radio" name="trivia" value="no"> Sail Fish <br/>
+						<input onclick="answer()" id="button"type="button" value="Sumbit Answer">
+ 				</form>
+			</div>
+
+
+
+
+		</div> <!-- closing leftside div tag -->
+
+		<div class="clearfloat"></div>
+
+
+
+
+		<hr/>
+
+		<center> Marchand <a href="https://lichess.org/">My Favorite Website</a> </center>
+
+		<footer id="footer">I created this website.</footer>
+
+	</body>
+</html>
