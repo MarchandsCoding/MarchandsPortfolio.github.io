@@ -17,8 +17,8 @@
 					<nav>	
 						<div class="name"><h1>Marchand</h1></div>
 						<ul>
-							<li> <a href="games.html">Projects</a> </li> 
-							<li> <a href="art.html">Art Gallery</a> </li>
+							
+							<li> <a href="art.html">Art Gallery</a> </li> 
 							
 
 						</ul>
@@ -39,29 +39,59 @@
 									
 							</div>
 
-
+							<!-- end col 1-->
 							<div class="about-col-2">
 									<h1 class="sub-title">About Me</h1>
-									<p class="info">I am 17 years old and finishing my senior year of high school as of this moment. My main goal right now is to become a chess master along with learning more code.	
-									Other interests I have are playing tennis, playing my guitar, and I also know how to speak spanish and cook.
-									On the left you will find a picture of myself along with my beloved dog Bobby.</p>
-							</div>
+									<p class="info">Hello, my name is Marchand and this is a little about me. I am an aspiring coder and this is of many projects I have done.
+									As of now I'm graduating high school at 17 years old and planning on going to college. On your left you will see a picture of me and my beloved dog, Bobby.</p>
+							
 
 
 									<div class="tab-titles">
+										<p class="tab-links active-link" onclick="opentab('skills')">Major Skills</p>
+										<p class="tab-links" onclick="opentab('goals')">Goals</p>
+										<p class="tab-links" onclick="opentab('interests')">Interests</p>
+									</div>		
+									<div class="tab-contents active-tab" id="skills">
+										<ul>
+											<li><span>Coding</span><br>I have completed 9 computer coding courses and I look to major in Computer Science</li>
+											<li><span>Foreign Language</span><br>I am fully bi-lingual in English and Spanish</li>
+											<li><span>Musical Instrument</span><br>I have been playing the guitar for 10+ years</li>
+										</ul>
 
-						</div>
-					</div>
-			</div>
+									</div>
 
-			<div id="contact">
-				<div class="container">
-					
+									<div class="tab-contents" id="goals">
+										<ul>
+											<li><span>Chess</span><br>I am currently titled an expert in chess and going for the next one, Master</li>
+										<!--	<li><span>Getting Healthier</span><br>I have never ate the healthiest but as of recently I have been eating better and getting more exercise</li> -->
+										
+
+										<li><span>Self Defense</span><br>This past year I have started self-defense classes with the idea to be able to defend myself at any time</li>
+										</ul>
+
+									</div>
+
+									<div class="tab-contents" id="interests">
+										<ul>
+											<li><span>Animals</span><br>I have always been very fond of animals since I was young and I love spending time with my dog, Bobby</li>
+											<li><span>Tennis</span><br>My father was a professional tennis coach and starting teaching me at 3 years old and I have been playing since</li>
+											
+
+											<!-- WIP              <li><span></span><br></li> -->
+											
+										</ul>
+
+									</div>
 
 
+							</div>
 
 
-
+							<!-- end col 2-->
+						</div> <!-- end row-->
+					</div> <!-- end container-->
+			</div> <!-- end about-->
 
 
 				</div>
@@ -71,7 +101,28 @@
 
 
 
+			<script>
+				var tablinks = document.getElementsByClassName("tab-links")
 
+				var tabcontents = document.getElementsByClassName("tab-contents")
+
+
+				function opentab(tabname){
+					for(tablink of tablinks){
+						tablink.classList.remove("active-link");
+					}
+
+					for(tabcontent of tabcontents){
+						tabcontent.classList.remove("active-tab");
+					}
+					event.currentTarget.classList.add("active-link");
+					document.getElementById(tabname).classList.add("active-tab");
+
+				}
+
+
+
+			</script>
 
 
 

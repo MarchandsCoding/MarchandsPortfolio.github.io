@@ -6,7 +6,7 @@
 }
 
 body{
-	background-color:#ccff66;
+	background-color:#248f24;
 	color: white;
 
 
@@ -125,18 +125,71 @@ nav ul li a:hover::after{
 	border-radius: 10px;
 }
 
+/* --col 2-- */
+
 .about-col-2{
-	width: 60%;
+	flex-basis: 60%;
 }
 
 .sub-title{
-	font-size: 80px;
+	font-size: 60px;
 	font-weight: 800;
-	color: blue;
+	color: #005580;
 }
 
 .info{
-	font-size: 25px;
-	font-weight: 250;
+	font-size: 22px;
+	font-weight: 200;
 	color: black;
+}
+
+.tab-titles{
+	display: flex;
+	margin: 20px 0 40px;
+}
+
+.tab-links{
+	margin-right: 50px;
+	font-size: 18px;
+	font-weight: bold;
+	cursor: pointer;
+	position: relative;
+
+}
+
+.tab-links::after{
+	content: '';
+	width: 0;
+	height: 3px;
+	background: black;
+	position: absolute;
+	left: 0;
+	bottom: -8px;
+	transition: 0.5s;
+
+}
+
+.tab-links.active-link::after{
+	width: 50%;
+
+}
+
+.tab-contents ul li{
+	list-style: none;
+	margin: 10px 0;
+
+}
+
+.tab-contents ul li span{
+	color: black;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.tab-contents{
+	display: none;
+}
+
+.tab-contents.active-tab{
+	display: block;
 }
