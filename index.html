@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+		<head>
+				
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+				<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+				<link rel="stylesheet" href="stylesheet.css">
+				<title> Marchand's Portfolio </title>
+
+		</head>
+
+
+		<body>
+
+			<div id="header">
+				<div class="container">
+					<nav>	
+						<div class="name"><h1>Marchand</h1></div>
+						<ul>
+							
+							<li> <a href="art.html">Art Gallery</a> </li> 
+							
+
+						</ul>
+					<nav>
+					<div class="header-text">
+						<p>Aspiring chess player and coder</p>
+						<h3>Hello, my name is <span>Marchand Spector</span></h3>
+					</div>
+				</div>
+			</div> <!-- end header -->
+
+			<div id="about">
+					<div class="container">
+						<div class="row">
+							<div class="about-col-1">
+									<img src="images/Selfie.jpg" class="selfie">
+									<img src="images/Bobby.jpg" class="bobby">
+									
+							</div>
+
+							<!-- end col 1-->
+							<div class="about-col-2">
+									<h1 class="sub-title">About Me</h1>
+									<p class="info">Hello, I'm Marchand and this is a little about me. I am an aspiring coder and this is of many projects I have done.
+									As of now I'm graduating high school at 17 years old and planning on going to college. On your left you will see a picture of me and my beloved dog, Bobby.</p>
+							
+
+
+									<div class="tab-titles">
+										<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+										<p class="tab-links" onclick="opentab('goals')">Goals</p>
+										<p class="tab-links" onclick="opentab('interests')">Interests</p>
+										<p class="tab-links" onclick="opentab('contact')">Contact Me</p>
+									</div>		
+									<div class="tab-contents active-tab" id="skills">
+										<ul>
+											<li><span>Coding</span><br>I have completed 9 computer coding courses including java, python, html, css, javascript and more</li>
+											<li><span>Foreign Language</span><br>I am fully bi-lingual in English and Spanish</li>
+											<li><span>Musical Instrument</span><br>I have been playing the guitar for 10+ years</li>
+											<li><span>Art</span><br>I have taking art classes for about 5 years and I have a gallery of my recent work in oil painting at the top</li>
+										</ul>
+
+									</div>
+
+									<div class="tab-contents" id="goals">
+										<ul>
+											<li><span>Chess</span><br>I am currently titled an expert in chess and studying to reach master</li>
+										<!--	<li><span>Getting Healthier</span><br>I have never ate the healthiest but as of recently I have been eating better and getting more exercise</li> -->
+										
+
+										<li><span>Cooking</span><br>With my mom being a great cook I have some experience in the kitchen</li>
+										</ul>
+
+									</div>
+
+									<div class="tab-contents" id="interests">
+										<ul>
+											<li><span>Animals</span><br>I have always been very fond of animals since I was young and I love spending time with my dog, Bobby</li>
+											<li><span>Tennis</span><br>My father was a professional tennis coach and starting teaching me at 3 years old and I have been playing since</li>
+											<!-- WIP              <li><span></span><br></li> -->
+										</ul>
+
+									</div>
+
+									<div class="tab-contents" id="contact">
+										<ul>
+											<li><span>Email</span><br>mspector05@gmail.com</li>
+										</ul>
+									</div>
+							</div> <!-- end col 2-->
+
+
+							
+						</div> <!-- end row-->
+					</div> <!-- end container-->
+			</div> <!-- end about-->
+
+
+				</div>
+			</div>
+
+
+
+
+
+			<script>
+				var tablinks = document.getElementsByClassName("tab-links")
+
+				var tabcontents = document.getElementsByClassName("tab-contents")
+
+
+				function opentab(tabname){
+					for(tablink of tablinks){
+						tablink.classList.remove("active-link");
+					}
+
+					for(tabcontent of tabcontents){
+						tabcontent.classList.remove("active-tab");
+					}
+					event.currentTarget.classList.add("active-link");
+					document.getElementById(tabname).classList.add("active-tab");
+
+				}
+
+
+
+			</script>
+
+
+
+
+
+			
+		</body>
+</html>
