@@ -2,4 +2,4 @@ Here is the link to my website:
 
 
 
-MarchandsCoding/MarchandsPortfolio.github.io.git
+https://marchandscoding.github.io/MarchandsPortfolio.github.io/
